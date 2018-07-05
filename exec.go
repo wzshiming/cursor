@@ -12,27 +12,27 @@ func Clear() {
 }
 
 // MoveUp is cursor move up
-func MoveUp(x uint8) {
+func MoveUp(x uint64) {
 	os.Stdout.WriteString(RawMoveUp(x))
 }
 
 // MoveDown is cursor move down
-func MoveDown(x uint8) {
+func MoveDown(x uint64) {
 	os.Stdout.WriteString(RawMoveDown(x))
 }
 
 // MoveRight is cursor move right
-func MoveRight(x uint8) {
+func MoveRight(x uint64) {
 	os.Stdout.WriteString(RawMoveRight(x))
 }
 
 // MoveLeft is cursor move left
-func MoveLeft(x uint8) {
+func MoveLeft(x uint64) {
 	os.Stdout.WriteString(RawMoveLeft(x))
 }
 
 // MoveTo is cursor move to position
-func MoveTo(x, y uint8) {
+func MoveTo(x, y uint64) {
 	os.Stdout.WriteString(RawMoveTo(x, y))
 }
 

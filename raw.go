@@ -10,27 +10,27 @@ func RawClear() string {
 }
 
 // RawMoveUp is cursor move up
-func RawMoveUp(x uint8) string {
+func RawMoveUp(x uint64) string {
 	return fmt.Sprintf("\x1b[%dA", x)
 }
 
 // RawMoveDown is cursor move down
-func RawMoveDown(x uint8) string {
+func RawMoveDown(x uint64) string {
 	return fmt.Sprintf("\x1b[%dB", x)
 }
 
 // RawMoveRight is cursor move right
-func RawMoveRight(x uint8) string {
+func RawMoveRight(x uint64) string {
 	return fmt.Sprintf("\x1b[%dC", x)
 }
 
 // RawMoveLeft is cursor move left
-func RawMoveLeft(x uint8) string {
+func RawMoveLeft(x uint64) string {
 	return fmt.Sprintf("\x1b[%dD", x)
 }
 
 // RawMoveTo is cursor move to position
-func RawMoveTo(x, y uint8) string {
+func RawMoveTo(x, y uint64) string {
 	return fmt.Sprintf("\x1b[%d;%dH", x, y)
 }
 
