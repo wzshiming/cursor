@@ -3,15 +3,15 @@ package cursor
 import (
 	"os"
 
-	_ "github.com/wzshiming/winseq"
+	_ "github.com/wzshiming/winseq" // Use Unix like Sequences in Windows
 )
 
-// Clear is clear screen CLS
+// Clear is clear the screen
 func Clear() {
 	os.Stdout.WriteString(RawClear())
 }
 
-// ClearLine is clear line to right
+// ClearLine is is clear from the cursor to the end of the line
 func ClearLine() {
 	os.Stdout.WriteString(RawClearLine())
 }
@@ -46,7 +46,7 @@ func Hide() {
 	os.Stdout.WriteString(RawHide())
 }
 
-// Hide is cursor show
+// Show is cursor show
 func Show() {
 	os.Stdout.WriteString(RawShow())
 }

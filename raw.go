@@ -4,12 +4,12 @@ import (
 	"fmt"
 )
 
-// RawClear is clear screen CLS
+// RawClear is clear the screen
 func RawClear() string {
 	return "\x1b[2J"
 }
 
-// RawClearLine is clear line to right
+// RawClearLine is clear from the cursor to the end of the line
 func RawClearLine() string {
 	return "\x1b[K"
 }
@@ -44,7 +44,7 @@ func RawHide() string {
 	return "\x1b[?25l"
 }
 
-// RawHide is cursor show
+// RawShow is cursor show
 func RawShow() string {
 	return "\x1b[?25h"
 }
