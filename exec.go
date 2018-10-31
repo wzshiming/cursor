@@ -11,6 +11,11 @@ func Clear() {
 	os.Stdout.WriteString(RawClear())
 }
 
+// ClearLine is clear line to right
+func ClearLine() {
+	os.Stdout.WriteString(RawClearLine())
+}
+
 // MoveUp is cursor move up
 func MoveUp(x uint64) {
 	os.Stdout.WriteString(RawMoveUp(x))

@@ -9,6 +9,11 @@ func RawClear() string {
 	return "\x1b[2J"
 }
 
+// RawClearLine is clear line to right
+func RawClearLine() string {
+	return "\x1b[K"
+}
+
 // RawMoveUp is cursor move up
 func RawMoveUp(x uint64) string {
 	return fmt.Sprintf("\x1b[%dA", x)
