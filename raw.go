@@ -36,7 +36,7 @@ func RawMoveLeft(x uint64) string {
 
 // RawMoveTo is cursor move to position
 func RawMoveTo(x, y uint64) string {
-	return fmt.Sprintf("\x1b[%d;%dH", x, y)
+	return fmt.Sprintf("\x1b[%d;%dH", y, x)
 }
 
 // RawHide is cursor hide
