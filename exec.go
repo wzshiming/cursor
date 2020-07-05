@@ -6,6 +6,26 @@ import (
 	_ "github.com/wzshiming/winseq" // Use Unix like Sequences in Windows
 )
 
+// ShowAlternateScreen is save the cursor position
+func SaveCursorPosition() {
+	os.Stdout.WriteString(RawSaveCursorPosition())
+}
+
+// RestoreCursorPosition is restore the cursor position
+func RestoreCursorPosition() {
+	os.Stdout.WriteString(RawRestoreCursorPosition())
+}
+
+// ShowAlternateScreen is show alternate screen
+func ShowAlternateScreen() {
+	os.Stdout.WriteString(RawShowAlternateScreen())
+}
+
+// HideAlternateScreen is hide alternate screen
+func HideAlternateScreen() {
+	os.Stdout.WriteString(RawHideAlternateScreen())
+}
+
 // Clear is clear the screen
 func Clear() {
 	os.Stdout.WriteString(RawClear())

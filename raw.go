@@ -4,6 +4,26 @@ import (
 	"fmt"
 )
 
+// RawSaveCursorPosition is save the cursor position
+func RawSaveCursorPosition() string {
+	return "\x1b7"
+}
+
+// RawRestoreCursorPosition is restore the cursor position
+func RawRestoreCursorPosition() string {
+	return "\x1b8"
+}
+
+// RawShowAlternateScreen is show alternate screen
+func RawShowAlternateScreen() string {
+	return "\x1b[?1049h"
+}
+
+// RawHideAlternateScreen is hide alternate screen
+func RawHideAlternateScreen() string {
+	return "\x1b[?1049l"
+}
+
 // RawClear is clear the screen
 func RawClear() string {
 	return "\x1b[2J"
