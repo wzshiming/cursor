@@ -8,6 +8,7 @@ This is a terminal cursor control library
 
 Virtual unix-like environments on Windows
 
+Related to style and color in [github.com/wzshiming/ctc](https://github.com/wzshiming/ctc)
 
 ## Support
 
